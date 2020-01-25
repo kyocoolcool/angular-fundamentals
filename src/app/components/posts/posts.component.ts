@@ -47,11 +47,11 @@ export class PostsComponent implements OnInit {
     });
   }
 
-  // getAxiosData() {
-  //   console.log('axios獲取數據')
-  //   let api="http://a.itying.com/api/productlist";
-  //   this.httpService.axiosGet(api).then((data)=>{
-  //     console.log(data);
-  //   })
-  // }
+  getAxiosData() {
+    console.log('axios獲取數據')
+    const api = 'http://a.itying.com/api/productlist';
+    this.httpService.axiosGet(api).then((data) => {
+      console.log(data);
+    });
+  }
 }

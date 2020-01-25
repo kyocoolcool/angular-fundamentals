@@ -21,7 +21,7 @@ import {RequestService} from './RxJS/services/request.service';
 import { Home3Component } from './RxJS/components/home3/home3.component';
 import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 import { PostsComponent } from './components/posts/posts.component';
-// import {HttpserviceService} from "./services/httpservice.service";
+import {HttpserviceService} from './services/httpservice.service';
 
 
 @NgModule({
@@ -50,7 +50,7 @@ import { PostsComponent } from './components/posts/posts.component';
     HttpClientModule,
     HttpClientJsonpModule
   ],
-  providers: [StorageService, RequestService],
+  providers: [StorageService, RequestService, HttpserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
