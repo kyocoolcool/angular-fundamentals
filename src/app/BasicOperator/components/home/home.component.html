@@ -1,0 +1,77 @@
+<h1>引入圖片</h1>
+<img src="assets/images/1.jpeg" alt="收藏">
+
+<img [src]="picUrl" width="100">
+
+<h1>循環數據，顯示索引 *ngFor index</h1>
+<ul>
+  <li *ngFor="let item of list;let key=index">
+    {{key}}-----{{item.title}}
+  </li>
+</ul>
+
+<h1>條件判斷語句 *ngIf</h1>
+<div *ngIf="flag">
+  <img src="assets/images/1.jpeg">
+</div>
+<div *ngIf="!flag">
+  <img src="assets/images/1.png">
+</div>
+
+<ul>
+  <li *ngFor="let item of list;let key=index">
+    <span *ngIf="key==1" class="red">{{key}}-----{{item.title}}</span>
+    <span *ngIf="key!=1">{{key}}-----{{item.title}}</span>
+  </li>
+</ul>
+
+<h1>條件判斷語句 *ngSwitch</h1>
+<span [ngSwitch]="orderStatus">
+  <p *ngSwitchCase="1">已經支付</p>
+  <p *ngSwitchCase="2">支付並且確認訂單</p>
+  <p *ngSwitchCase="3">已經發貨</p>
+  <p *ngSwitchDefault>無效</p>
+</span>
+
+<h1>屬性[ngClass]</h1>
+<div [ngClass]="{pink:true}">
+  ngClass演示
+</div>
+
+<div [ngClass]="{'pink':flag,'blue':!flag}">
+  ngClass演示2
+</div>
+
+<h1>循環數組，讓數組第一個元素樣式為red</h1>
+<ul>
+  <li *ngFor="let item of list;let key=index" [ngClass]="{red:key==0,blue:key==1,pink:key==2}">
+    {{key}}-----{{item.title}}
+  </li>
+</ul>
+
+<h1>屬性[ngStyle]</h1>
+<p style="color: red;">我是p標籤</p>
+<p [ngStyle]="{'color':'blue'}">我是p標籤</p>
+<p [ngStyle]="{'color':attr}">我是p標籤</p>
+
+<h1>Pipes</h1>
+{{today|date:'yyyyMMdd HH:mm:ss'}}
+
+<h1>Events</h1>
+<strong>{{title}}</strong>
+<br>
+<button (click)="run()">執行事件</button>
+<button (click)="getData()">執行事件獲取數據</button>
+<button (click)="setData()">執行事件改變數據</button>
+
+<h1>表單事件 表單對象</h1>
+keyDown:<input type="text" (keydown)="keyDown($event)">
+keyUp:<input type="text" (keyup)="keyUp($event)">
+click:<input type="button" (click)="getEvent($event)" value="獲取event對象">
+
+<h1>雙向數據綁定--MVVM 只是針對表單</h1>
+<input type="text" [(ngModel)]='keywords'/>
+{{keywords}}
+
+<button (click)="changeKeyWords()">changeKeyWords</button>
+<button (click)="getKeyWords()">getKeyWords</button>

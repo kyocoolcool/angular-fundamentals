@@ -1,0 +1,25 @@
+<p>
+  posts works!
+</p>
+
+<button (click)="getData()">get</button>
+
+<br>
+
+<button (click)="postData()">post</button>
+
+<br>
+
+<button (click)="getJsonpData()">通過jsonp獲取服務器數據(跨域的一種解決方案)</button>
+
+
+<br>
+
+<!--<button (click)="getAxiosData()">通過第三方模塊獲取服務器數據</button>-->
+<hr>
+
+<br>
+
+<ul>
+  <li *ngFor="let item of list">{{item.title}}</li>
+</ul>

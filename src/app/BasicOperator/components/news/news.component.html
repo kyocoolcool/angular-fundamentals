@@ -1,0 +1,46 @@
+<h2>
+  news works!
+</h2>
+<h3>{{userInfo.name}}</h3>
+<h3>{{userInfo.age}}</h3>
+<h3>{{message}}</h3>
+<div title="測試1">早安新聞</div>
+<div [title]="message2">晚安新聞</div>
+<div>{{content}}</div>
+<div [innerHTML]="content"></div>
+<div>1+2={{1 + 2}}</div>
+<ol>
+  <li *ngFor="let item of arr2">
+    {{item}}
+  </li>
+</ol>
+
+<ol>
+  <li *ngFor="let item of arr">
+    {{item}}
+  </li>
+</ol>
+
+<ul>
+  <li *ngFor="let item of list">
+    {{item}}
+  </li>
+</ul>
+
+<ol>
+  <li *ngFor="let item of userList">
+    {{item.name}}----{{item.age}}
+  </li>
+</ol>
+
+<ul>
+  <li *ngFor="let item of cars">
+    {{item.brand}}
+    <ol>
+      <li *ngFor="let car of item.list">
+        {{car.title}}-------{{car.price}}
+      </li>
+    </ol>
+  </li>
+</ul>
+

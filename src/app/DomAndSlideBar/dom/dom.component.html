@@ -1,0 +1,13 @@
+<app-head #header></app-head>
+<div id="box">
+  this is box
+</div>
+
+<div id="box1" *ngIf="flag">
+  this is box1
+</div>
+<div #myBox>
+  我是一個DOM節點
+</div>
+
+<button (click)="getChildRun()">getChildRun</button>

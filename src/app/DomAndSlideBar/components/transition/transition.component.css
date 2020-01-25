@@ -1,0 +1,11 @@
+#aslide{
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top:0px;
+  background: black;
+  color: pink;
+  transform: translate(100%,0);
+  transition: all,2s;
+}
