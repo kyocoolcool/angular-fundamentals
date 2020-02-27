@@ -1,0 +1,55 @@
+<div class="content">
+  <div class="left">
+<!--    <a href="#">商品分類列表</a>-->
+    <a [routerLink]="['/product/pcat']" routerLinkActive="active">商品分類列表</a>
+    <br>
+    <br>
+<!--    <a href="#">商品列表</a>-->
+    <a [routerLink]="['/product/plist']" routerLinkActive="active">商品列表</a>
+  </div>
+  <div class="right">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<p>product works!</p>
+<br>
+<br>
+<a [routerLink]="['/productContent/','1234']">跳轉到商品詳情</a>
+<br>
+<br>
+<button (click)="goContent()">js路由跳轉</button>
+<button (click)="goHome()">回到首頁</button>
+<button (click)="goNews()">get傳值跳轉</button>
+
+<br>
+<br>
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">First</th>
+    <th scope="col">Last</th>
+    <th scope="col">Handle</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row">1</th>
+    <td>Mark</td>
+    <td>Otto</td>
+    <td>@mdo</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>Jacob</td>
+    <td>Thornton</td>
+    <td>@fat</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td colspan="2">Larry the Bird</td>
+    <td>@twitter</td>
+  </tr>
+  </tbody>
+</table>

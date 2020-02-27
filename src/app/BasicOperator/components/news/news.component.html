@@ -43,4 +43,20 @@
     </ol>
   </li>
 </ul>
+<!--&lt;!&ndash;get傳值&ndash;&gt;-->
+<!--<ul>-->
+<!--  <li *ngFor="let item of list2;let key=index;">-->
+<!--    &lt;!&ndash; <a href="#">{{key}}-&#45;&#45;&#45;&#45;{{item}}</a>  &ndash;&gt;-->
+<!--    &lt;!&ndash; get 請求傳參 到newcontent component&ndash;&gt;-->
+<!--    <a routerLink="/newcontent" [queryParams]="{aid:key}">{{key}}-&#45;&#45;&#45;&#45;{{item}}</a>-->
+<!--  </li>-->
+<!--</ul>-->
+
+<ul>
+  <li *ngFor="let item of list2;let key=index">
+    <a [routerLink]="['/newcontent/',key]" >{{key}}------{{item}}</a>
+  </li>
+</ul>
+
+<a routerLink="/newcontent">新聞詳情點此</a>
 

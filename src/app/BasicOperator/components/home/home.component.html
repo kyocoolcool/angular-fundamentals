@@ -1,3 +1,17 @@
+<div class="content">
+  <div class="left">
+<!--    <a href="#">歡迎首頁</a>-->
+    <a [routerLink]="['/home/welcome']" routerLinkActive="active">歡迎首頁</a>
+    <br>
+    <br>
+<!--    <a href="#">系統設置</a>-->
+    <a [routerLink]="['/home/setting']" routerLinkActive="active">系統設置</a>
+  </div>
+  <div class="right">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
 <h1>引入圖片</h1>
 <img src="assets/images/1.jpeg" alt="收藏">
 

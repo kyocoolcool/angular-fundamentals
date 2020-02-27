@@ -22,6 +22,13 @@ import { Home3Component } from './RxJS/components/home3/home3.component';
 import {HttpClientJsonpModule, HttpClientModule} from '@angular/common/http';
 import { PostsComponent } from './components/posts/posts.component';
 import {HttpserviceService} from './services/httpservice.service';
+import { NewcontentComponent } from './components/newcontent/newcontent.component';
+import { ProductComponent } from './BasicOperator/components/product/product.component';
+import { ProductContentComponent } from './components/product-content/product-content.component';
+import { WelcomeComponent } from './BasicOperator/components/home/welcome/welcome.component';
+import { SettingComponent } from './BasicOperator/components/home/setting/setting.component';
+import { PcatComponent } from './BasicOperator/components/product/pcat/pcat.component';
+import { PlistComponent } from './BasicOperator/components/product/plist/plist.component';
 
 
 @NgModule({
@@ -41,7 +48,14 @@ import {HttpserviceService} from './services/httpservice.service';
     Footer2Component,
     LifecycleComponent,
     Home3Component,
-    PostsComponent
+    PostsComponent,
+    NewcontentComponent,
+    ProductComponent,
+    ProductContentComponent,
+    WelcomeComponent,
+    SettingComponent,
+    PcatComponent,
+    PlistComponent,
   ],
   imports: [
     BrowserModule,

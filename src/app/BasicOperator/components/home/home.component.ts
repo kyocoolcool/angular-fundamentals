@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   public picUrl = 'https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg';
@@ -19,9 +19,9 @@ export class HomeComponent implements OnInit {
   public title: string = 'I am title';
   public flag: boolean = false;
   public orderStatus: number = 3;
-  /**1:已經支付 2:支付並且確認訂單 3:已經發貨 4:無效*/
+  /* 1:已經支付 2:支付並且確認訂單 3:已經發貨 4:無效 */
 
-  /**狀態屬性*/
+  /* 狀態屬性 */
   public attr: string = 'pink';
 
   public today: any = new Date();
@@ -40,30 +40,32 @@ export class HomeComponent implements OnInit {
   }
 
   getData() {
-    alert(this.list[2].title)
+    alert(this.list[2].title);
   }
 
   setData() {
     this.title = 'changed title';
   }
 
-  /**e.target:獲取當前對象*/
+  /* e.target:獲取當前對象 */
   keyDown(e) {
-    if(e.key=='Enter')
-      console.log('按了Enter')
-    else
-      console.log(e.key)
+    if (e.key === 'Enter') {
+      console.log('按了Enter');
+    } else {
+      console.log(e.key);
+    }
   }
 
   keyUp(e) {
-    if (e.key == 'Enter'){
-      console.log(e.target.value)
-      console.log('按了Enter')
+    // tslint:disable-next-line:triple-equals
+    if (e.key == 'Enter') {
+      console.log(e.target.value);
+      console.log('按了Enter');
     }
   }
 
   getEvent(event) {
-    let dom:any = event.target;
+    const dom: any = event.target;
     dom.style.color = 'red';
   }
 
