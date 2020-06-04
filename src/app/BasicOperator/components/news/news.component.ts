@@ -10,6 +10,15 @@ export class NewsComponent implements OnInit {
   public message: any;
   public message2 = '晚安';
   public list2: any[] = [];
+  public classStr:string = 'bgBlue active';
+  public classObj={
+    bgBlue:true,
+    active:false
+  }
+  isShow = true;
+  classArr = ['aaa', 'bgBlue', 'ccc'];
+  styleStr = "background:black";
+
   constructor() {
     this.message = '這是構造賦值';
   }

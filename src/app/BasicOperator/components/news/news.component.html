@@ -9,6 +9,21 @@
 <div>{{content}}</div>
 <div [innerHTML]="content"></div>
 <div>1+2={{1 + 2}}</div>
+<!--樣式套用三種方式-->
+<div  class="{{classStr}}">bgblue1</div>
+<div  [class]="classStr">bgblue2</div>
+<div [attr.class]="classStr">bgblue3</div>
+<!--傳入字串-->
+<div  [class]="'abc efg'">bgblue4</div>
+<!--傳入對象(若是true會自動帶進來 測試不work)-->
+<div  [class]="classObj">bgblue5</div>
+<div  [class]="{bgBlue:isShow}">bgblue6</div>
+<!--數組模式-->
+<div  [class]="['bgBlue active']">bgblue7</div>
+<div  [class]="classArr">bgblue8</div>
+<!--style表達式-->
+<div  [style]="styleStr">style</div>
+
 <ol>
   <li *ngFor="let item of arr2">
     {{item}}

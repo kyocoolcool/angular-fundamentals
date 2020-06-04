@@ -13,12 +13,12 @@ export class TransitionComponent implements OnInit {
   }
 
   showAslide() {
-    let aslide=document.getElementById('aslide');
+    const aslide = document.getElementById('aslide');
     aslide.style.transform = 'translate(0,0)';
   }
 
   hiddenAslide() {
-    let aslide=document.getElementById('aslide');
+    const aslide = document.getElementById('aslide');
     aslide.style.transform = 'translate(100%,0)';
   }
 
